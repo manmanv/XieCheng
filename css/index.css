@@ -1,0 +1,387 @@
+body {
+    font: normal 16px/1.5 PingFangSC-regular,Tahoma,Lucida Grande,Verdana,Microsoft Yahei,STXihei,hei;
+    color: #000;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-text-size-adjust: none;
+    -moz-user-select: none;
+    max-width: 540px;
+    margin: 0 auto;
+    background: #f4f4f4;
+}
+a{
+    text-decoration: none;
+    color: #222222;
+}
+ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+div{
+    box-sizing: border-box;
+}
+/*搜索模块*/
+.search-index{
+    display: flex;
+    /*固定定位跟父级没有关系,以屏幕为准*/
+    position: fixed;
+    top: 0;
+    /*居中*/
+    left:50%;
+    transform: translateX(-50%);
+    /*固定的盒子应该有宽度*/
+    width: 100%;
+    height: 44px;
+    min-width: 320px;
+    max-width: 540px;
+    background-color: #F6F6F6;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+}
+/*搜索输入框*/
+.search-input{
+    position: relative;
+    margin:7px 10px;
+    flex:1;
+    height: 25px;
+    border: 1px solid #cccccc;
+    color: #666666;
+    border-radius: 5px;
+    outline: 0;
+    line-height: 25px;
+    font-size: 12px;
+    padding-left: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.search-input::before{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: url("../images/sprite.png") no-repeat -59px -279px;
+    background-size:104px auto;
+}
+.search-index .user::before{
+    display: block;
+    content: "";
+    width: 24px;
+    height: 24px;
+    background:url("../images/sprite.png") no-repeat -58px -194px ;
+    background-size: 104px auto;
+    margin: 1px auto;
+}
+.search-index .user{
+    width: 44px;
+    height: 44px;
+    color: #1d91ee;
+    text-align: center;
+    font-size: 12px;
+}
+
+.focus{
+    padding-top: 44px;
+}
+.focus img{
+    width: 100%;
+}
+
+.local-nav{
+    display: flex;
+    height: 64px;
+    margin: 0px 4px;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.local-nav li{
+    flex: 1;
+}
+.local-nav a{
+    display: flex;
+    /*主轴设为y*/
+    flex-direction: column;
+    /*侧轴居中对齐*/
+    align-items: center;
+    font-size: 12px;
+
+}
+.local-nav li [class^="local-nav-icon"]{
+    width: 32px;
+    height: 32px;
+    background-color: pink;
+    margin-top: 8px;
+    background: url(../images/localnav_bg.png) no-repeat 0 0;
+    background-size: 32px auto;
+}
+.local-nav li a .local-nav-icon2{
+    background-position: 0 -32px;
+}
+.local-nav li a .local-nav-icon3{
+    background-position: 0 -64px;
+}
+.local-nav li a .local-nav-icon4{
+    background-position: 0 -96px;
+}
+.local-nav li a .local-nav-icon5{
+    background-position: 0 -128px;
+}
+
+.nav-op-big{
+    display: flex;
+    height: 270px;
+    margin: 3px 4px;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.nav-op-big>div{
+    flex: 1;
+}
+
+/*酒店*/
+.jiudian{
+    display: flex;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    line-height:40px;
+    background:-webkit-linear-gradient(left,#fa5e56,#fa6c54,#fa884f,#fa974e);
+}
+.jiudian span{
+    flex: 1;
+    border-bottom: 1px solid #ffffff;
+}
+.jiudian span::after{
+    content: "";
+    display: block;
+    width: 41px;
+    height: 35px;
+    background: url("../images/sprite.png")no-repeat 0 -130px;
+    background-size: 104px auto;
+    margin: 0px auto;
+}
+.jiudian-mod{
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    line-height: 44px;
+}
+.jiudian-mod ul{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+}
+.jiudian-mod ul li{
+    flex:1;
+    border-left: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+
+/*机票*/
+.jipiao{
+    display: flex;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    line-height:40px;
+    border-top: 1px solid #ffffff;
+    background:-webkit-linear-gradient(left,#4b92ed,#50abed,#50abed,#52b9ed);
+}
+.jipiao span{
+    flex: 1;
+    border-bottom: 1px solid #ffffff;
+
+}
+.jipiao span::after{
+    content: "";
+    display: block;
+    width: 42px;
+    height: 31px;
+    background: url("../images/sprite.png")no-repeat 0 -293px;
+    background-size: 104px auto;
+    margin: 0px auto;
+}
+.jipiao-mod{
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    line-height: 44px;
+}
+.jipiao-mod ul{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+}
+.jipiao-mod ul li{
+    flex:1;
+    border-left: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+
+/*旅游*/
+.lvyou{
+    display: flex;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    line-height:40px;
+    border-top: 1px solid #ffffff;
+    background:-webkit-linear-gradient(left,#37c3a6,#45c892,#55cd78,#6ad45b);
+
+}
+.lvyou span{
+    flex: 1;
+    border-bottom: 1px solid #ffffff;
+
+}
+.lvyou span::after{
+    content: "";
+    display: block;
+    width: 34px;
+    height:44px;
+    background: url("../images/sprite.png")no-repeat 0 -180px;
+    background-size: 104px auto;
+    margin: 0px auto;
+}
+.lvyou-mod{
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    line-height: 44px;
+}
+.lvyou-mod ul{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+}
+.lvyou-mod ul li{
+    flex:1;
+    border-left: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+/*侧导航栏*/
+.subnav-entry{
+    display: flex;
+    height: 118px;
+    margin: 3px 4px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    align-content:space-around;
+    font-size: 12px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.subnav-entry li{
+    /*里面的子盒子可以写百分比*/
+    flex:20%;
+}
+.subnav-entry li a::before{
+    content: "";
+    display: block;
+    width: 24px;
+    height: 20px;
+    background: url("../images/subnav-bg.png") no-repeat 0 0;
+    background-size: 24px auto;
+    margin: 0 auto;
+}
+
+/*福利模块*/
+.sales-bd{
+    /*display: flex;*/
+    height: 465px;
+    margin-top: 10px;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    background-color:#ffffff ;
+}
+.sales-header{
+    position: relative;
+    flex: 100%;
+    height: 45px;
+    border-bottom: 1px solid #f2f2f2;
+
+}
+.sales-header .hot::before{
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    content: "";
+    width: 73px;
+    height: 17px;
+    background: url("../images/hot.png") no-repeat 0 -19px;
+    background-size: 73px auto;
+}
+.sales-header .more{
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    padding-left: 10px;
+    width: 100px;
+    height: 20px;
+    border-radius:10px;
+    font-size: 12px;
+    color: white;
+    background:-webkit-linear-gradient(left,#ff506a,#ff5886,#ff6ac2);
+}
+ .sales-bd .sales-pic-top{
+    display: flex;
+    height: 420px;
+    width: 100%;
+    flex-direction: column;
+ }
+.sales-pic-top .p2{
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #dbdbdb;
+}
+.sales-pic-top .p2 a:first-of-type{
+    flex:1;
+    background: url("../upload/pic1.jpg") no-repeat;
+    background-size: auto 190px;
+}
+.sales-pic-top .p2 a:last-of-type{
+    flex:1;
+    background: url("../upload/pic2.jpg") no-repeat;
+    background-size: auto 190px;
+}
+.sales-pic-top .p1{
+    flex:1;
+    display: flex;
+    border-bottom: 1px solid #dbdbdb;
+}
+.sales-pic-top div a:first-child{
+    border-right: 1px solid #dbdbdb;
+}
+.sales-pic-top div:nth-of-type(2) a:nth-of-type(1){
+    flex: 1;
+    background: url("../upload/pic3.jpg") no-repeat;
+    background-size: auto 115px;
+}
+.sales-pic-top div:nth-of-type(2) a:nth-of-type(2){
+    flex: 1;
+    background: url("../upload/pic4.jpg") no-repeat;
+    background-size: auto 115px;
+}
+.sales-pic-top div:nth-of-type(3) a:nth-of-type(1){
+    flex: 1;
+    background: url("../upload/pic5.jpg") no-repeat;
+    background-size: auto 115px;
+}
+.sales-pic-top div:nth-of-type(3) a:nth-of-type(2){
+    flex: 1;
+    background: url("../upload/pic6.jpg") no-repeat;
+    background-size: auto 115px;
+}
+
